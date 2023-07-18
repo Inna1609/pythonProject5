@@ -1,7 +1,7 @@
 #Напишіть програму яка перевіряє чи стрічка містить лише великі і малі літери, числа та нижнє підкреслення.
 import re
-demo_str = 'asdfsdfasfasfdSGSADGAGSDGASG'
-pattern = (r'\w+')
+demo_str = 'asdfsdfasfasfdSGSADGAGSDGASG12121212____'
+pattern = (r'\w+|_')
 result = re.fullmatch(pattern, demo_str)
 print (result)
 
