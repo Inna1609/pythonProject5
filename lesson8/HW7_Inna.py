@@ -14,7 +14,7 @@ with open('names.txt', 'w') as names:
     names_dict_writer.writerow({'Number': '1', 'Name': 'Ivan', 'Country': 'UK'})
     names_dict_writer.writerow({'Number': '2', 'Name': 'Ira', 'Country': 'Canada'})
     names_dict_writer.writerow({'Number': '3', 'Name': 'Ija', 'Country': 'Turkey'})
-    def get_surnames():
+    def get_names():
         with open('names.txt', 'r') as names:
             names_reader = csv.DictReader(names, delimiter=',')
             names1 = []
@@ -22,7 +22,7 @@ with open('names.txt', 'w') as names:
                 names1.append(row['Name'])
         return names1
 
-names1 = get_surnames()
+names1 = get_names()
 print(names1)
 
 #3. Написати функцію, яка отримує у вигляді параметра ім'я файлу (authors.txt) і повертає список словників виду {"date": date} у яких date - це дата з рядка (якщо є), Наприклад [{"date": "1st January 1919"}, {"date": "8th February 1828"}, ...]
