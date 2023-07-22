@@ -11,9 +11,9 @@ with open('names.txt', 'w') as names:
     names_fields = ['Number', 'Name', 'Country']
     names_dict_writer = csv.DictWriter(names, fieldnames= names_fields, delimiter = ',')
     names_dict_writer.writeheader()
-    names_dict_writer.writerow({'Number': '1', 'Name': 'Ivan', 'Country': 'UK'})
+    names_dict_writer.writerow({'Number': '1', 'Name': 'Ivan', 'Country': 'Ukraine'})
     names_dict_writer.writerow({'Number': '2', 'Name': 'Ira', 'Country': 'Canada'})
-    names_dict_writer.writerow({'Number': '3', 'Name': 'Ija', 'Country': 'Turkey'})
+    names_dict_writer.writerow({'Number': '3', 'Name': 'Ija', 'Country': 'Poland'})
     def get_names():
         with open('names.txt', 'r') as names:
             names_reader = csv.DictReader(names, delimiter=',')
