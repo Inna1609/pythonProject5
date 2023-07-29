@@ -1,0 +1,1 @@
+from .biblioteka3 import summ
