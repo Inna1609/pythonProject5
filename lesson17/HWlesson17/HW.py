@@ -31,32 +31,3 @@ converter.read_file('hw.json')
 converter.write_file('example.csv')
 
 
-#2 завдання. скористайтесь pytest. напишіть функцію, яка додає в csv один рядок.
-# Напишіть функцію, яка видаляє з csv один рядок. напишіть два тести, які перевіряють відповідно чи додався рядок і чи він видалився.
-# в якості перевірного csv можете скористатись доданим до завдання файлом або будь-яким іншим.
-class CSVfunctions:
-    def __init__(self, filename):
-        self.filename = filename
-
-    def add_line(self, data):
-        with open(self.filename, 'a', newline='') as csv_file:
-            csv_writer = csv.writer(csv_file)
-            csv_writer.writerow(data)
-
-    def delete_line(self, index):
-        lines = []
-        with open(self.filename, 'r', newline='') as csv_file:
-            csv_reader = csv.reader(csv_file)
-            for row in csv_reader:
-                lines.append(row)
-
-        try:
-            index = int(index)
-            if 0 <= index < len(lines):
-                del lines[index]
-        except ValueError:
-            pass
-
-        with open(self.filename, 'w', newline='') as csv_file:
-            csv_writer = csv.writer(csv_file)
-            csv_writer.writerows(lines)
